@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== Favicon c: ===============-->
+    <link rel="shortcut icon" href="favicon.png" type="icono">
+
+    <!--=============== Iconos ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== Llamando a nuestro CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Encriptador Responsivo</title>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="barra">
+            <a href="#" class="barra__logo">
+                <img src="logo.png" alt="logo"> Felipe Jiménez
+            </a>
+    </header>
+
+    <main class="page">
+        <div class="container">  
+                <fieldset class="menu">
+                    <textarea  autofocus cols="20" rows="10" class="mensaje" placeholder="Escriba su texto"required onkeyup="remplazar(this)"></textarea>
+                    
+                    <div class="mensaje1">
+                        <p class="mensaje__de__condicion">• Solo letras minúsculas y sin acentos.</p>
+                    </div>
+                    
+                    <div class="botones__principales"> 
+                        <div class="botones">
+                            <input type="button" class="boton__encriptar" onclick="clickBoton1()" value="Encriptar">
+                            <input type="button" class="boton__desencriptar" onclick="clickBoton2()" value="Desencriptar">
+                        
+                        </div>
+                    </div>
+                </fieldset>
+
+                <section class="mensaje__final">
+                    <textarea readonly class="recibir"  cols="20" rows="10" ></textarea>
+                    <div class="final">    
+                <ul class="resultado">
+                        <div class="mensaje_2">
+                            <p class="error_1">• Ningún mensaje fue encontrado.</p>
+                            <p class="error_2">• Ingresa tu texto en el compo Encriptar o Desencriptar.</p>
+                            <br><input type="submit" value="Copiar" class="boton__copiar" onclick="copiar()">
+                        </div>
+                </ul>
+                    </div>
+                </section>
+        </div>
+    </main>
+    
+            <!--=============== Footer ===============-->
+           <footer class="footer">
+            <div class="final">
+                <div class="footer__container container grid">
+                    <a href="#" class="footer__logo">
+                        <img src="logo.png" alt="logo Fjc">
+                    </a>
+    
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/profile.php?id=100046272020849" target="_blank" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/cazzaressss/?next=%2F" target="_blank" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://github.com/fjicazares" target="_blank" class="footer__social-link">
+                                <i class="ri-github-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer__copy">
+                    <h1 class="footer__copy-link">&#169; Felipe Jiménez</a>
+                </p>
+            </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

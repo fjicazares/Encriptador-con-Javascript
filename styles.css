@@ -1,0 +1,379 @@
+/*=============== fuente ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== Declaramos nuetras variables ===============*/
+
+:root {
+  /*=============== Colores ===============*/
+  
+  --color-principal: rgb(31, 97, 141);
+  --color-secundario: rgb(93, 173, 226 );
+  --color-tercero: rgb(40, 55, 71);
+  --color-del-titulo:rgb(26, 82, 118);
+  --color-diferente:rgb(33, 47, 60);
+  --color-de-los-textos:rgb(52, 152, 219);
+  --color-del-body:rgb(239, 245, 245);
+  --color-del-container:rgb(229, 231, 233);
+  
+  
+  /*========== Tamaños y tipografia ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --fuente-del-body: 'Poppins', sans-serif;
+  --segunda-fuente: 'Kaushan Script', cursive;
+  --fuente-mas-grande: 1.5rem;
+  --tamaño-fuente-h1 : 1.5rem;
+  --tamaño-fuente-h2: 1.25rem;
+  --tamaño-fuente-h3: 1rem;
+  --tamaño-fuente-normal: .938rem;
+  --tamaño-fuente-pequeña: .813rem;
+  --tamaño-fuente-mas-pequeña: .75rem;
+  
+  /*========== Extras de la fuente ==========*/
+  --fuente-mediana: 500;
+  --fonte-semi-negrita: 600;
+
+
+  }
+  
+  
+
+/*=============== Ponemos nuestra base ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body { min-height: 100vh; }
+
+body,
+button,
+input {
+  font-family: var(--fuente-del-body);
+  font-size: var(--tamaño-fuente-normal);
+}
+
+body {
+  background-color: var(--color-del-body);
+  color: var(--color-de-los-textos);
+}
+
+h1, h2, h3 {
+  color: var(--color-del-titulo);
+  font-weight: var(--fuente-mediana);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+fieldset{
+    left: 120px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.container {
+    display: flex; flex-wrap: wrap;
+}
+
+.menu {
+    flex: 1 1 150px;
+}
+
+/*=============== El header ===============*/
+.header {
+    padding: 10px;
+    width: auto;
+    border-radius: 2.5rem;
+    left: 10px;
+    background-color: var(--color-principal);
+    position: fixed;
+    height: 3rem;
+    position: absolute;
+}
+
+.barra__logo {
+  font-weight: var(--fuente-mediana);
+  color: var(--color-del-body);
+  text-decoration:none;
+}
+
+.barra__logo img {
+  width: 1.25rem;
+}
+
+.page {
+    padding: 5rem;
+}
+
+
+.mensaje{
+    width: 800px;
+    height: 560px;
+    background-color: var(--color-del-container);
+    border-color: transparent;
+    font-size: var(--fuente-mas-grande);
+    color: var(--color-del-titulo);
+    font-family: var(--fuente-del-body);
+    border-radius: 2rem;
+    padding: 2rem;
+    font-weight: var(--fonte-semi-negrita);
+}
+
+.mensaje:hover {
+    background-color: var(--color-del-body);
+    font-size: var(--fuente-mediana);
+    color: var(--color-de-los-textos);
+    font-weight: 600;
+}
+
+.mensaje::placeholder{
+    color: var(--color-del-titulo);
+    padding: 2rem;
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 600;
+    font-family: var(--fuente-del-body)
+}
+
+.mensaje__de__condicion{
+    background-color: white;
+    border-radius: 2rem;
+    text-align: center;
+    height: auto;
+    width: 800px;
+    padding: .7rem;
+    font-weight: var(--fonte-semi-negrita);
+}
+
+/*=============== Hacemos resposivo la parte del mensaje ===============*/
+@media screen and (max-width: 720px) {
+
+    .mensaje{
+        width: 250px;
+        height: 400px;
+        font-size: var(--tamaño-fuente-normal);
+    }
+
+    .mensaje__de__condicion{
+        width: 250px;
+        font-size: 11px;
+        } 
+  }
+
+.botones {
+    padding: 1rem;
+    margin-left: 300px;
+}
+
+.botones__principales{
+    display: absolute;
+    gap: 5px;
+}
+
+.boton__encriptar{
+    font-weight: bold;
+    font-size: var(--fuente-mediana);
+    line-height: 10px;
+    width: 130px;
+    height: 40px;
+    background: var(--color-principal);
+    border-radius: 2rem;
+    border-color: transparent;
+    color: var(--color-del-body);
+}
+
+.boton__encriptar:hover{
+    background: var(--color-secundario);
+    font-size: 18px;
+    width: 150px;
+}
+
+
+.boton__desencriptar{
+    font-weight: bold;
+    font-size: var(--fuente-mediana);
+    width: 130px;
+    height: 40px;
+    background: var(--color-secundario);
+    border-radius: 24px;
+    border-color: transparent;
+    color: var(--color-del-body);
+}
+.boton__desencriptar:hover{
+    background: var(--color-principal);
+    font-size: 18px;
+    width: 150px;
+}
+
+/*=============== Hacemos responsivos los botones ===============*/
+@media screen and (max-width: 720px) {
+    .botones {
+        margin-left: 35px;
+    }
+    
+    .boton__encriptar{
+        font-size: 11px;
+        width: 70px;
+        height: 30px;
+    }
+    
+    .boton__encriptar:hover{
+        background: var(--color-secundario);
+        font-size: 18px;
+        width: 100px;
+        height: 50;
+    }
+    
+    
+    .boton__desencriptar{
+        font-size: 11px;
+        width: 70px;
+        height: 30px;
+    }
+    .boton__desencriptar:hover{
+        background: var(--color-principal);
+        font-size: 18px;
+        width: 130px;
+        height: 50;
+    }
+  }
+
+
+  .recibir{
+    border-radius: 2rem;
+    width: 400px;
+    height: 530px;
+    background-image: url(personaa.png);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: 50px 90px;
+    font-size: var(--fuente-mas-grande);
+    color: var(--color-de-los-textos);
+    padding: 2rem;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+.recibir:hover{
+    background-color: aliceblue;
+}
+
+
+.resultado{
+    top: 400px;
+    left: 960px;
+    text-align: center;
+}
+
+.error_1{
+    font-weight: bold;
+}
+
+.mensaje_2{
+    width: auto;
+}
+
+
+/*=============== Hacemos responsivo de recibir y copiar ===============*/
+@media screen and (max-width: 720px) {
+    .recibir{
+        width: 250px;
+        height: 300px;
+        background-size: 150px;
+    }
+  }
+
+.boton__copiar{
+    width: 140px;
+    height: 40px;
+    font-weight: 600;
+    border-color: var(--color-secundario);
+    font-size: var(--fuente-mediana);
+    background: aliceblue;
+    border-radius: 2rem;
+}
+.boton__copiar:hover{
+    background: var(--color-principal);
+    font-size: var(--fuente-mediana);
+    color: var(--color-del-body);
+}
+
+/*=============== Hacemos responsivo el boton de copiar ===============*/
+@media screen and (max-width: 720px) {
+    .boton__copiar{
+        width: 100px;
+        height: 35px;
+    }
+  }
+  
+  
+/*=============== En esta parte es el footer ===============*/
+
+.final{
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    background-color: var(--color-del-container);
+    border-radius: 2rem;
+}
+.footer__container {
+    background-color: var(--color-del-titulo);
+    border-radius: 2rem;
+    border-radius: .4rem;
+}
+  
+.footer__logo {
+    width: 2rem;
+}
+  
+.footer__social {
+    padding: .8rem;
+    height: auto;
+}
+  
+.footer__social-link {
+    color: var(--color-del-body);
+    padding: 2rem;
+    border-radius: .25rem;
+    font-size: 1.2rem;
+}
+  
+.footer__social-link:hover {
+    background-color: var(--color-del-titulo);
+}
+  
+.footer__copy {
+    margin-top: 2rem;
+    text-align: center;
+}
+  
+.footer__copy-link {
+    font-size: var(--tamaño-fuente-h3);
+    color: var(--color-de-los-textos);
+    text-align: center;
+}
+
+
+/*=============== Barra lateral ===============*/
+::-webkit-scrollbar {
+    width: .60rem;
+    border-radius: .5rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-del-titulo);
+    border-radius: 1.5rem;
+  }
+
+  
+
+  
+
